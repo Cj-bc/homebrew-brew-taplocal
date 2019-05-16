@@ -5,7 +5,13 @@ class BrewTaplocal < Formula
   head "https://github.com/Cj-bc/brew-taplocal.git"
   sha256 "b1792909dde908e0978aac9b8cc0d60410ad12512f478317f5ad5c1030f7f3ad"
 
+  depends_on "bats-core" => :test
+
   def install
     bin.install "brew-taplocal"
+  end
+
+  test do
+    system "bats", "#{prefix}/test.bats"
   end
 end
