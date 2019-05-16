@@ -6,6 +6,6 @@ class BrewTaplocal < Formula
   sha256 "b1792909dde908e0978aac9b8cc0d60410ad12512f478317f5ad5c1030f7f3ad"
 
   def install
-    bin.install brew-taplocal
+    bin.install "brew-taplocal"
   end
 end
